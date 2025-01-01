@@ -1,0 +1,172 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;    /* Center content vertically */
+    height: 80px;
+    background: gold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*position: sticky;*/
+    /*top: 0;*/
+    /*z-index: 999;*/
+    color: gray;
+}
+
+.logo{
+    font-size: 30px;
+    top: 50%;
+}
+
+#navbar {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar > li{
+    padding: 0 50px;
+    font-size: 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: gray;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+#navbar li a::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 100%;
+    background: white; /* Underline color */
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s linear;
+}
+#navbar li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: white;
+}
+
+#navbar li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: width 0.3s ease;
+    color: white;
+}
+
+.mobile{
+    display:none;
+}
+
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.mobile{
+    display: none;
+    align-items:center ;
+}
+
+#close{
+    display: none;
+}
+
+.searchbar{
+    height: 75px;
+}
+
+@media(max-width:735px){
+    #navbar > li{
+        padding: 0 10px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:500px){
+
+    .header {
+        justify-content: flex-start; /* Center content horizontally */
+    }
+
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 75px;
+        left: -400px;
+        height: 100vh;
+        width: 300px; 
+        background-color: gold;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        /*
+        z-index: 999; */
+        overflow-y: auto;
+    }
+
+    #navbar > li{
+        width: 100%;
+        list-style: none;
+        padding-bottom: 30px;
+        margin: 0px 0px 20px 0px;
+        border-bottom: 1px solid gray;
+    }
+    #navbar > li:first-child{
+        margin-top: 80px;
+        border-top: 1px solid gray;
+        padding-top: 20px;
+    }
+    #navbar > li > a{
+        margin: 20px;
+    }
+
+    #navbar.active{
+        left: 0px;
+    }
+    .mobile{
+        display: flex;
+        align-items:center ;
+    }
+    .mobile i{
+        color: white;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        color: #fff;
+        font-size: 24px;
+    }
+    #lg-bag{
+        display: none;
+    }
+}

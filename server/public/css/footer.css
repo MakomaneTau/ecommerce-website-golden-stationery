@@ -1,0 +1,45 @@
+.footer{
+    margin-top: 10px;
+}
+
+.copyright{
+    color: gray;
+    display: flex;
+    background-color: gold;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    font-size: 17px;
+}
+.copyright a{
+    color: gray;
+    text-decoration: none;
+}
+
+
+.info{
+    background: gray;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px 10px;
+    color: white;
+}
+
+.info .about,.contact,.policies{
+    margin: 0 auto;
+}
+
+.info .about ul,.contact,.policies ul{
+    position: relative;
+    list-style: none;
+    margin: 0 0;
+    padding: 0px 0px;
+    padding-top: 10px;
+}
+
+.info .about ul li,.policies ul li{
+    margin-bottom: 10px;
+}
