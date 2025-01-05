@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
-    font-size: 17px;
+    font-size: 15px;
 }
 .copyright a{
     color: gray;
@@ -20,19 +20,33 @@
 
 .info{
     background: gray;
-    height: 200px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 20px 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    padding: 20px 20px;
     color: white;
 }
-
+.together{
+    background: gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-left: 20px;
+    color: white;
+}
+.together-2{
+    background: gray;
+    display: block;
+    gap: 20px;
+    padding-left: 20px;
+    color: white;
+}
+/*
 .info .about,.contact,.policies{
     margin: 0 auto;
-}
+}*/
 
-.info .about ul,.contact,.policies ul{
+.info .about ul,.contact ul,.policies ul{
     position: relative;
     list-style: none;
     margin: 0 0;
@@ -41,5 +55,57 @@
 }
 
 .info .about ul li,.policies ul li{
-    margin-bottom: 10px;
+    margin: 10px;
+}
+
+.info .about ul li:hover,
+.policies ul li:hover{
+    margin: 10px;
+    color: gold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.contact ul li{
+    margin: 10px;
+}
+
+.contact ul li:first-child:hover{
+    color: gold;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contact .socialIcons i{
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.contact .socialIcons i:hover{
+    color: gold;
+    transition: .5s;
+
+}
+
+@media(max-width:600px){
+    .info{
+        background: gray;
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 20px 10px;
+        color: white;
+    }
+    .together-2{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px 20px;
+    }
+    .copyright{
+        font-size: 11px;
+        padding: 10px;
+    }
 }
